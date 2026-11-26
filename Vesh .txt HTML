@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VESH VENTURE | Unique Dream. Go. Grow.</title>
+  <style>
+    :root {
+      --parrot-green: #2E9E3A;
+      --dark-green: #1B6B24;
+      --gold: #F4C430;
+      --soft-gold: #FFF6D6;
+      --white: #FFFFFF;
+      --light-bg: #F7FBF7;
+      --text-dark: #1E2923;
+      --text-muted: #52635A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-dark);
+      background-color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--white);
+      border-bottom: 2px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--parrot-green), var(--dark-green));
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+      padding: 4px;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark-green);
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--parrot-green);
+    }
+
+    /* Soft Texture Lighting Hero Banner */
+    .hero {
+      background:
+        radial-gradient(circle at 20% 25%, rgba(244, 196, 48, 0.28), transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
+        linear-gradient(135deg, #1E7A2B 0%, #2E9E3A 55%, #46B84E 100%);
+      color: var(--white);
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.16);
+      border: 1px solid var(--gold);
+      color: var(--soft-gold);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      letter-spacing: 0.6px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+      color: var(--white);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .tagline {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--soft-gold);
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--text-dark);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: #ffd447;
+      transform: translateY(-1px);
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 20px;
+    }
+
+    section:nth-child(even) {
+      background-color: var(--light-bg);
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: var(--dark-green);
+      margin-bottom: 10px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 4px;
+      background-color: var(--gold);
+      margin: 0 auto 14px;
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background-color: var(--white);
+      border: 1px solid #e2ece4;
+      border-top: 4px solid var(--parrot-green);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(27, 107, 36, 0.05);
+    }
+
+    .card h3 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .quote-card {
+      border-top-color: var(--gold);
+      background-color: #fffdf5;
+    }
+
+    /* Contact & Upcoming Enquiry Placeholder */
+    .contact-box {
+      background-color: var(--white);
+      border: 1px solid #dce8de;
+      border-left: 5px solid var(--gold);
+      border-radius: 12px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .placeholder-note {
+      background-color: var(--soft-gold);
+      border: 1px dashed var(--parrot-green);
+      border-radius: 10px;
+      padding: 18px;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: var(--dark-green);
+      color: var(--white);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.92rem;
+    }
+
+    footer span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .tagline {
+        font-size: 1.15rem;
+      }
+
+      nav ul {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Home Navigation -->
+  <header id="home">
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <!-- Replace .logo-placeholder with <img src="unicorn-logo.png" alt="VESH VENTURE Logo" style="width:48px;height:48px;border-radius:50%;object-fit:cover;"> -->
+        <div class="logo-placeholder">UNICORN<br />LOGO</div>
+        <div class="brand-name">VESH VENTURE</div>
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#ventures">Ventures</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">ALL-IN-ONE CORPORATE PLATFORM</div>
+      <h1>VESH VENTURE</h1>
+      <div class="tagline">Unique Dream. Go. Grow.</div>
+      <p>
+        Building sustainable businesses, strategic ventures, and high-impact projects
+        with clarity, execution speed, and long-term value.
+      </p>
+      <a href="#contact" class="btn-gold">Connect With Us</a>
+    </div>
+  </section>
